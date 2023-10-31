@@ -2,7 +2,7 @@
 <?php
 session_start();
 $users = json_decode(file_get_contents('users.json'), true);
-echo $_SESSION['userEmail'];
+// if (!isset($_SESSION['userEmail'])) {
 if (isset($_POST['login'])) {
     $userEmail = $_POST['email'];
     $userPassword = $_POST['password'];
